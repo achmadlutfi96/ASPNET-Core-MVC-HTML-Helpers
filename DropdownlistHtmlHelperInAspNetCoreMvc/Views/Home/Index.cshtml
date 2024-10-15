@@ -1,0 +1,81 @@
+﻿@model DropdownlistHtmlHelperInAspNetCoreMvc.Models.Employee
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* <div class="form-group">
+<!-- Label for the Departments dropdown -->
+<label for="Departments" class="form-label">Select Department</label>
+<!-- Dropdown list with Bootstrap styling -->
+@Html.DropDownList("Departments", new List<SelectListItem>
+{
+new SelectListItem { Text = "IT", Value = "1", Selected=true},
+new SelectListItem { Text = "HR", Value = "2"},
+new SelectListItem { Text = "Payroll", Value = "3"}
+}, "Select Department", new { @class = "form-control" })
+</div> *@
+
+@* <div class="form-group">
+    <!-- Label for the Departments dropdown -->
+    <label for="Departments" class="form-label">Select Department</label>
+    <!-- Dropdown list with Bootstrap styling -->
+    @Html.DropDownList("Departments", @ViewBag.Departments, "Select Department", new { @class = "form-control" })
+
+    <!-- Label for the Departments dropdown -->
+    <label for="Gender" class="form-label">Select Gender</label>
+    @Html.DropDownList("Gender", // Name and ID of the <select> element
+                                          // This SelectList creates the list of options for the dropdown from the Gender enum.
+                                          // Enum.GetValues(typeof(Gender)) retrieves all the values of the Gender enum (e.g., Male, Female, Other).
+                                          // .Cast<Gender>() converts these values to the Gender enum type.
+            new SelectList(Enum.GetValues(typeof(Gender))
+            .Cast<Gender>() // Converts the collection of enum values to Gender type
+                            // Select() is a LINQ method that projects each Gender enum value into a new SelectListItem object.
+                            // For each Gender enum value, we create a SelectListItem with Text and Value properties.
+                            // Text will display the string representation of the enum (e.g., "Male"), and
+                            // Value will store the integer value of the enum, cast to a string (e.g., "1" for Male).
+            .Select(e => new SelectListItem
+    {
+        Text = e.ToString(), // The display text for the option (e.g., "Male")
+        Value = ((int)e).ToString() // The value attribute for the option (e.g., "1")
+    }),
+            // "Value" specifies that the dropdown will use the "Value" property of each SelectListItem for the option values.
+            // "Text" specifies that the dropdown will display the "Text" property of each SelectListItem.
+            "Value", "Text"),
+            // The third argument is a string that sets the default placeholder option.
+            // This will create an option with an empty value and the text "Select Gender".
+            "Select Gender",
+            // This anonymous object specifies additional HTML attributes for the <select> element.
+            // @class is a reserved keyword, so it's escaped with @ to define the Bootstrap class "form-control".
+            new { @class = "form-control" })
+</div> *@
+
+
+<div class="form-group">
+    <!-- Label for the Gender dropdown -->
+    <label for="Gender" class="form-label">Select Gender</label>
+    <!--
+        Dropdown list for selecting Gender, using Bootstrap styling
+        The DropDownListFor helper binds the selected value to the "Gender" property of the Employee model
+        The SelectList is created from the Gender enum, generating options based on enum values
+        The first option is a placeholder "Select Gender"
+        The form-control class is used for Bootstrap styling
+    -->
+    @Html.DropDownListFor(emp => emp.Gender,
+            new SelectList(Enum.GetValues(typeof(Gender))),
+            "Select Gender",
+            new { @class = "form-control" })
+    <!-- Label for the Department dropdown -->
+    <label for="DepartmentID" class="form-label">Select Department</label>
+    <!--
+        Dropdown list for selecting Department, using Bootstrap styling
+        The DropDownListFor helper binds the selected value to the "DepartmentID" property of the Employee model
+        The SelectList is created from the data stored in ViewBag.Departments, which contains department information
+        The Id of the department is used as the value, and the Name of the department is displayed
+        The first option is a placeholder "Select Department"
+        The form-control class is used for Bootstrap styling
+    -->
+    @Html.DropDownListFor(emp => emp.DepartmentID,
+            new SelectList(ViewBag.Departments, "Id", "Name"),
+            "Select Department",
+            new { @class = "form-control" })
+</div>

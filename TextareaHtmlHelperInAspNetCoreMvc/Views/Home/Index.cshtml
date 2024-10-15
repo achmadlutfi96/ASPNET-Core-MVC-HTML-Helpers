@@ -1,0 +1,10 @@
+﻿@model TextareaHtmlHelperInAspNetCoreMvc.Models.Employee
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* <label for="Address">Address</label>
+@Html.TextArea("Address", null, new { @class = "form-control" }) *@
+
+<label for="Address">Address</label>
+@Html.TextAreaFor(m => m.Address, new { @class = "form-control" })

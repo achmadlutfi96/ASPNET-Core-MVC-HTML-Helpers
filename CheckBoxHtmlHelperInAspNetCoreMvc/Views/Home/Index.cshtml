@@ -1,0 +1,40 @@
+﻿@model CheckBoxHtmlHelperInAspNetCoreMvc.Models.SecuritySettingsViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Update Profile Page</h2> 
+
+<form asp-action="UpdateProfile" asp-controller="Home" method="post">
+    @* Creating a form that will send a POST request to the "UpdateProfile" action method of the "Home" controller *@
+
+    <div class="form-check">
+        @* A div container with the Bootstrap class "form-check" for styling checkbox input elements in a consistent way *@
+
+        @Html.CheckBox("SubscribeToNewsletter", false, new { @class = "form-check-input" })
+         @* Generates a checkbox input element
+         First argument "SubscribeToNewsletter" is the name of the checkbox, which will be used to retrieve the value in the controller action.
+         Second argument "false" sets the default value of the checkbox to unchecked.
+         Third argument is an anonymous object that assigns a CSS class "form-check-input" for Bootstrap styling. *@
+
+        <label class="form-check-label" for="SubscribeToNewsletter">
+            Subscribe to newsletter
+        </label>
+        @* Label associated with the checkbox, provides descriptive text to the user.
+        The "for" attribute links the label to the checkbox with the ID "SubscribeToNewsletter". *@
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+     @* A submit button with Bootstrap styling. When clicked, the form data is sent to the server to the specified action method "UpdateProfile" in the "Home" controller. *@
+</form>
+
+<h2>Enable/Disable Two Factor Authentication</h2>
+<form asp-action="UpdateSecuritySettings" asp-controller="Home" method="post">
+    <div class="form-check">
+        @Html.CheckBoxFor(model => model.EnableTwoFactorAuth, new { @class = "form-check-input" })
+        <label class="form-check-label" for="enableTwoFactorAuth">
+            Enable Two-Factor Authentication
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Settings</button>
+</form>

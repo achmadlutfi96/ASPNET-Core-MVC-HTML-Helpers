@@ -1,0 +1,17 @@
+﻿@model TextboxHtmlHelperInAspNetCoreMvc.Models.Employee
+@{
+    ViewData["Title"] = "Home Page";
+
+    // Hardcoded DateTime value
+    var hardcodedDate = new DateTime(2024, 8, 20);
+    // Format the DateTime value to a specific format
+    var formattedDate = hardcodedDate.ToString("yyyy-MM-dd"); // Change format as needed
+}
+
+@* @Html.TextBox("Name", null, new { @class = "form-control" }) *@
+
+@Html.TextBoxFor(m => m.Name , new { @class = "form-control" })
+<br>
+@* @Html.TextBox("DateOfBirth", hardcodedDate, formattedDate, new { @class = "form-control", placeholder = "Enter your birth date" }) *@
+
+@Html.TextBoxFor(model => model.DateOfBirth, "{0:yyyy-MM-dd}", new { @class = "form-control", placeholder = "Enter Date of Birth" })

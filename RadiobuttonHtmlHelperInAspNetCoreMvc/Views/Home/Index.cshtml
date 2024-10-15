@@ -1,0 +1,56 @@
+﻿@* @{
+    // Setting the title of the page to "Home Page"
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="form-group">
+    <!-- Wraps the radio button and its descriptive text (Male) in a label for better accessibility -->
+    <label class="form-check-label">
+        @Html.RadioButton("Gender", "Male", false, new { @class = "form-check-input" })
+        <!--
+        Renders a radio button input element:
+        - "Gender" is the name attribute, grouping this with other inputs with the same name so only one can be selected.
+        - "Male" is the value attribute, which will be the value sent when this radio button is selected.
+        - false indicates that this radio button is not checked by default.
+        - Adds Bootstrap's "form-check-input" class for styling consistency with Bootstrap forms.
+        -->
+        Male <!-- Visible label text for the radio button -->
+    </label>
+</div>
+<div class="form-group">
+    <!-- Similar label structure for the Female radio button -->
+    <label class="form-check-label">
+        @Html.RadioButton("Gender", "Female", false, new { @class = "form-check-input" })
+        <!--
+        Renders a radio button for Female option:
+        - Uses the same "Gender" name, ensuring it is part of the same group as the "Male" radio button.
+        - "Female" as the value attribute.
+        - false indicates this button is also unchecked by default.
+        - Uses "form-check-input" class for Bootstrap styling.
+        -->
+        Female <!-- Visible label text for the radio button -->
+    </label>
+</div> *@
+
+@model RadiobuttonHtmlHelperInAspNetCoreMvc.Models.Company
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Home Page</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @foreach (var department in Model.Departments())
+        {
+            <div class="form-check">
+                <label class="form-check-label">
+                    @Html.RadioButtonFor(m => m.SelectedDepartment, department.Id, new { @class = "form-check-input" })
+                    @department.Name
+                </label>
+            </div>
+        }
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+}

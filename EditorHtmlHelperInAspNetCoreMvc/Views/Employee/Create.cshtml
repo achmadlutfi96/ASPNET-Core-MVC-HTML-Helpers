@@ -1,0 +1,100 @@
+@model Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form asp-action="Create" asp-controller="Employee" method="post" enctype="multipart/form-data">
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("Name", "Name", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("Name", new { htmlAttributes = new { @class = "form-control", placeholder = "Enter your name" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("Age", "Age", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("Age", new { htmlAttributes = new { @class = "form-control", placeholder = "Enter your age" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("Salary", "Salary", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("Salary", new { htmlAttributes = new { @class = "form-control", placeholder = "Enter your salary" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("IsEmployed", "Is Employed", new { @class = "form-check-label" })
+        </div>
+        <div class="col-md-9 d-flex align-items-center">
+            @Html.Editor("IsEmployed", new { htmlAttributes = new { @class = "form-check-input" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("Skills", "Skills", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("Skills", new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("DateOfBirth", "Date of Birth", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("DateOfBirth", new { htmlAttributes = new { @class = "form-control", placeholder = "Enter your birth date" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("Gender", "Gender", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("Gender", new { htmlAttributes = new { @class = "form-select" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("ProfilePicture", "Profile Picture", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("ProfilePicture", new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("UserId", "User ID", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("UserId", new { htmlAttributes = new { @class = "form-control", placeholder = "Enter your User ID" } })
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-3">
+            @Html.Label("WorkingHours", "Working Hours", new { @class = "form-label" })
+        </div>
+        <div class="col-md-9">
+            @Html.Editor("WorkingHours", new { htmlAttributes = new { @class = "form-control", placeholder = "Enter your working hours" } })
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
