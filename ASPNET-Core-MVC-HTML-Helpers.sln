@@ -3,27 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlHelpersInAspNetCoreMvc", "HtmlHelpersInAspNetCoreMvc\HtmlHelpersInAspNetCoreMvc.csproj", "{7152DC98-43DE-4C87-9019-7F1D9D0C5679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlHelpersInAspNetCoreMvc", "HtmlHelpersInAspNetCoreMvc\HtmlHelpersInAspNetCoreMvc.csproj", "{7152DC98-43DE-4C87-9019-7F1D9D0C5679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextboxHtmlHelperInAspNetCoreMvc", "TextboxHtmlHelperInAspNetCoreMvc\TextboxHtmlHelperInAspNetCoreMvc.csproj", "{BA4B6093-CFB3-4325-B2FB-4059AFBB7405}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextboxHtmlHelperInAspNetCoreMvc", "TextboxHtmlHelperInAspNetCoreMvc\TextboxHtmlHelperInAspNetCoreMvc.csproj", "{BA4B6093-CFB3-4325-B2FB-4059AFBB7405}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextareaHtmlHelperInAspNetCoreMvc", "TextareaHtmlHelperInAspNetCoreMvc\TextareaHtmlHelperInAspNetCoreMvc.csproj", "{F7D3AEE8-6BEC-4D7F-B9AD-D6274194AAB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextareaHtmlHelperInAspNetCoreMvc", "TextareaHtmlHelperInAspNetCoreMvc\TextareaHtmlHelperInAspNetCoreMvc.csproj", "{F7D3AEE8-6BEC-4D7F-B9AD-D6274194AAB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropdownlistHtmlHelperInAspNetCoreMvc", "DropdownlistHtmlHelperInAspNetCoreMvc\DropdownlistHtmlHelperInAspNetCoreMvc.csproj", "{78EF40FA-149D-4A00-B4C3-B32DAECE57DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DropdownlistHtmlHelperInAspNetCoreMvc", "DropdownlistHtmlHelperInAspNetCoreMvc\DropdownlistHtmlHelperInAspNetCoreMvc.csproj", "{78EF40FA-149D-4A00-B4C3-B32DAECE57DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiobuttonHtmlHelperInAspNetCoreMvc", "RadiobuttonHtmlHelperInAspNetCoreMvc\RadiobuttonHtmlHelperInAspNetCoreMvc.csproj", "{3E55ED96-3694-4E89-A5AB-B009ED007250}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadiobuttonHtmlHelperInAspNetCoreMvc", "RadiobuttonHtmlHelperInAspNetCoreMvc\RadiobuttonHtmlHelperInAspNetCoreMvc.csproj", "{3E55ED96-3694-4E89-A5AB-B009ED007250}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBoxHtmlHelperInAspNetCoreMvc", "CheckBoxHtmlHelperInAspNetCoreMvc\CheckBoxHtmlHelperInAspNetCoreMvc.csproj", "{5F31560A-BAB4-444F-BDB7-5DC1F04B4A3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CheckBoxHtmlHelperInAspNetCoreMvc", "CheckBoxHtmlHelperInAspNetCoreMvc\CheckBoxHtmlHelperInAspNetCoreMvc.csproj", "{5F31560A-BAB4-444F-BDB7-5DC1F04B4A3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorHtmlHelperInAspNetCoreMvc", "EditorHtmlHelperInAspNetCoreMvc\EditorHtmlHelperInAspNetCoreMvc.csproj", "{0F47B7B1-AB99-434B-A040-6548BD8D27AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditorHtmlHelperInAspNetCoreMvc", "EditorHtmlHelperInAspNetCoreMvc\EditorHtmlHelperInAspNetCoreMvc.csproj", "{0F47B7B1-AB99-434B-A040-6548BD8D27AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomImageHtmlHelperInAspNetCoreMvc", "CustomImageHtmlHelperInAspNetCoreMvc\CustomImageHtmlHelperInAspNetCoreMvc.csproj", "{2335C56E-DD5C-4BF2-ADB9-207A5B8A14EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7152DC98-43DE-4C87-9019-7F1D9D0C5679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -54,5 +53,15 @@ Global
 		{0F47B7B1-AB99-434B-A040-6548BD8D27AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F47B7B1-AB99-434B-A040-6548BD8D27AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F47B7B1-AB99-434B-A040-6548BD8D27AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2335C56E-DD5C-4BF2-ADB9-207A5B8A14EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2335C56E-DD5C-4BF2-ADB9-207A5B8A14EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2335C56E-DD5C-4BF2-ADB9-207A5B8A14EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2335C56E-DD5C-4BF2-ADB9-207A5B8A14EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {955B834A-ED68-44BF-A926-F1CE3EA026CF}
 	EndGlobalSection
 EndGlobal
