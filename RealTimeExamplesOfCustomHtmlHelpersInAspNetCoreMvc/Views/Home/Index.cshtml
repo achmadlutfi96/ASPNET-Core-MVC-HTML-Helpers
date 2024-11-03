@@ -1,0 +1,12 @@
+﻿@{
+    Layout = null;
+    var breadcrumbs = new List<(string Url, string Name)>
+    {
+        ("/", "Home"),
+        ("/products", "Products"),
+        ("/products/1", "Product 1")
+    };
+}
+@Html.Breadcrumbs(breadcrumbs)
+
+@Html.CustomInputWithValidation("UserName", "User Name")
