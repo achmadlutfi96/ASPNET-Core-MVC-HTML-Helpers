@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomImageHtmlHelperInAspN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeExamplesOfCustomHtmlHelpersInAspNetCoreMvc", "RealTimeExamplesOfCustomHtmlHelpersInAspNetCoreMvc\RealTimeExamplesOfCustomHtmlHelpersInAspNetCoreMvc.csproj", "{A633E1BC-C949-4463-B61C-738171627E49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingFormUsingHtmlHelpersInAspNetCoreMvc", "CreatingFormUsingHtmlHelpersInAspNetCoreMvc\CreatingFormUsingHtmlHelpersInAspNetCoreMvc.csproj", "{BE7724A1-38B3-459B-9802-CFF675C5D56D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A633E1BC-C949-4463-B61C-738171627E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A633E1BC-C949-4463-B61C-738171627E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A633E1BC-C949-4463-B61C-738171627E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7724A1-38B3-459B-9802-CFF675C5D56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7724A1-38B3-459B-9802-CFF675C5D56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7724A1-38B3-459B-9802-CFF675C5D56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7724A1-38B3-459B-9802-CFF675C5D56D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
